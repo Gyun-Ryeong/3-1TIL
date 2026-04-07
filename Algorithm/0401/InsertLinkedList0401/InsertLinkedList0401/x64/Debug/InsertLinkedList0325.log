@@ -1,0 +1,8 @@
+﻿  insertLinkedList.c
+  insertLinkedMain.c
+C:\AlgorithmB\Project\InsertLinkedList0401\InsertLinkedList0325\insertLinkedList.c(13,15): warning C4101: 'lh' :참조되지 않은 지역 변수입니다.
+C:\AlgorithmB\Project\InsertLinkedList0401\InsertLinkedList0325\insertLinkedList.c(46,45): warning C4028: 정식 매개 변수 2이(가) 선언과 다릅니다.
+C:\AlgorithmB\Project\InsertLinkedList0401\InsertLinkedList0325\insertLinkedList.c(56,23): warning C4028: 정식 매개 변수 3이(가) 선언과 다릅니다.
+C:\AlgorithmB\Project\InsertLinkedList0401\InsertLinkedList0325\insertLinkedList.c(75,44): warning C4028: 정식 매개 변수 2이(가) 선언과 다릅니다.
+  코드를 생성하고 있습니다...
+  InsertLinkedList0325.vcxproj -> C:\AlgorithmB\Project\InsertLinkedList0401\x64\Debug\InsertLinkedList0325.exe
