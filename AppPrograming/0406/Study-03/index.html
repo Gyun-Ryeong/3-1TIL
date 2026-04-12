@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>상식 퀴즈 게임</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ① 메인 화면 -->
+  <div id="screen-main" class="screen active">
+    <div class="container">
+      <h1 class="title">상식 퀴즈</h1>
+      <p class="subtitle">한국사 · 과학 · 지리 · 일반상식</p>
+      <div class="btn-group">
+        <button class="btn btn-primary" id="btn-start">게임 시작</button>
+        <button class="btn btn-secondary" id="btn-ranking">랭킹 보기</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ② 카테고리 선택 화면 -->
+  <div id="screen-category" class="screen">
+    <div class="container">
+      <h2 class="screen-title">카테고리 선택</h2>
+      <p class="screen-desc">플레이할 카테고리를 선택하세요</p>
+      <div class="category-grid">
+        <div class="category-card" data-category="한국사">
+          <span class="category-icon">📜</span>
+          <span class="category-name">한국사</span>
+          <span class="category-count">10문제</span>
+        </div>
+        <div class="category-card" data-category="과학">
+          <span class="category-icon">🔬</span>
+          <span class="category-name">과학</span>
+          <span class="category-count">10문제</span>
+        </div>
+        <div class="category-card" data-category="지리">
+          <span class="category-icon">🌍</span>
+          <span class="category-name">지리</span>
+          <span class="category-count">10문제</span>
+        </div>
+        <div class="category-card" data-category="일반상식">
+          <span class="category-icon">💡</span>
+          <span class="category-name">일반상식</span>
+          <span class="category-count">10문제</span>
+        </div>
+        <div class="category-card category-all" data-category="전체">
+          <span class="category-icon">🎯</span>
+          <span class="category-name">전체 도전</span>
+          <span class="category-count">40문제 랜덤</span>
+        </div>
+      </div>
+      <button class="btn btn-outline" id="btn-category-back">메인으로</button>
+    </div>
+  </div>
+
+  <!-- ③ 퀴즈 진행 화면 -->
+  <div id="screen-quiz" class="screen">
+    <div class="container">
+      <div class="quiz-header">
+        <span id="quiz-category" class="quiz-category-badge"></span>
+        <span id="quiz-progress" class="quiz-progress"></span>
+        <span id="quiz-score" class="quiz-score">0점</span>
+      </div>
+      <div class="progress-bar-wrap">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <div class="quiz-body">
+        <p id="quiz-question" class="quiz-question"></p>
+      </div>
+      <div id="quiz-options" class="quiz-options">
+        <button class="option-btn" data-index="0"></button>
+        <button class="option-btn" data-index="1"></button>
+        <button class="option-btn" data-index="2"></button>
+        <button class="option-btn" data-index="3"></button>
+      </div>
+      <p class="keyboard-hint">키보드 숫자키 1~4로도 선택할 수 있어요</p>
+    </div>
+  </div>
+
+  <!-- ④ 피드백 화면 -->
+  <div id="screen-feedback" class="screen">
+    <div class="container">
+      <div id="feedback-result" class="feedback-result"></div>
+      <p id="feedback-message" class="feedback-message"></p>
+      <div id="feedback-options" class="quiz-options feedback-options"></div>
+      <button class="btn btn-primary" id="btn-next">다음 문제</button>
+    </div>
+  </div>
+
+  <!-- ⑤ 결과 화면 -->
+  <div id="screen-result" class="screen">
+    <div class="container">
+      <h2 class="screen-title">최종 결과</h2>
+      <div id="result-grade" class="result-grade"></div>
+      <p id="result-grade-msg" class="result-grade-msg"></p>
+      <div class="result-stats">
+        <div class="stat-item">
+          <span class="stat-label">총점</span>
+          <span id="result-score" class="stat-value"></span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-label">정답률</span>
+          <span id="result-accuracy" class="stat-value"></span>
+        </div>
+      </div>
+      <div id="result-category-breakdown" class="result-breakdown"></div>
+      <div class="ranking-save">
+        <input type="text" id="input-nickname" class="nickname-input" placeholder="닉네임을 입력하세요" maxlength="10" />
+        <button class="btn btn-primary" id="btn-save-ranking">랭킹 저장</button>
+      </div>
+      <div class="btn-group">
+        <button class="btn btn-secondary" id="btn-retry">다시 하기</button>
+        <button class="btn btn-outline" id="btn-result-home">메인으로</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ⑥ 랭킹 화면 -->
+  <div id="screen-ranking" class="screen">
+    <div class="container">
+      <h2 class="screen-title">랭킹 TOP 10</h2>
+      <div id="ranking-table-wrap">
+        <table class="ranking-table">
+          <thead>
+            <tr>
+              <th>순위</th>
+              <th>닉네임</th>
+              <th>점수</th>
+              <th>정답률</th>
+              <th>날짜</th>
+            </tr>
+          </thead>
+          <tbody id="ranking-tbody"></tbody>
+        </table>
+        <p id="ranking-empty" class="ranking-empty" style="display:none;">아직 기록이 없습니다.</p>
+      </div>
+      <button class="btn btn-outline" id="btn-ranking-home">메인으로</button>
+    </div>
+  </div>
+
+  <!-- 토스트 알림 -->
+  <div id="toast" class="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
