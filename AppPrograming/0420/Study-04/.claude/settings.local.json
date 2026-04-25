@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node src/test-api.js)",
+      "Bash(node -e ':*)",
+      "Bash(pip --version)",
+      "Bash(py --version)",
+      "Bash(py -m pip install -r requirements.txt -q)",
+      "Bash(py -m streamlit run app.py --server.headless true)",
+      "Bash(py -m streamlit run app.py)",
+      "Bash(curl:*)"
+    ]
+  }
+}
