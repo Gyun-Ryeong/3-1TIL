@@ -1,0 +1,93 @@
+﻿#include <stdio.h>
+#include <stdlib.h>
+
+// 연결 큐 원소(element)의 자료형을 int로 변경 (카드 번호)
+typedef int element;
+
+// 연결 큐의 노드를 구조체로 정의
+typedef struct QNode {
+    element data;
+    struct QNode* link;
+} QNode;
+
+// 연결 큐에서 사용하는 포인터 front와 rear를 구조체로 정의
+typedef struct {
+    QNode* front, * rear;
+} LQueueType;
+
+// 공백 연결 큐를 생성하는 연산
+LQueueType* createLinkedQueue() {
+    LQueueType* LQ;
+    LQ = (LQueueType*)malloc(sizeof(LQueueType));
+    LQ->front = NULL;
+    LQ->rear = NULL;
+    return LQ;
+}
+
+// 연결 큐가 공백 상태인지 검사하는 연산
+int isLQEmpty(LQueueType* LQ) {
+    if (LQ->front == NULL) {
+        return 1;
+    }
+    else return 0;
+}
+
+// 연결 큐의 rear에 원소를 삽입하는 연산
+void enLQueue(LQueueType* LQ, element item) {
+    QNode* newNode = (QNode*)malloc(sizeof(QNode));
+    newNode->data = item;
+    newNode->link = NULL;
+    if (LQ->front == NULL) {		// 현재 연결 큐가 공백 상태인 경우
+        LQ->front = newNode;
+        LQ->rear = newNode;
+    }
+    else {						// 현재 연결 큐가 공백 상태가 아닌 경우
+        LQ->rear->link = newNode;
+        LQ->rear = newNode;
+    }
+}
+
+// 연결 큐에서 원소를 삭제하고 반환하는 연산
+element deLQueue(LQueueType* LQ) {
+    QNode* old = LQ->front;
+    element item;
+    if (isLQEmpty(LQ)) 
+        return 0;
+    else {
+        item = old->data;
+        LQ->front = LQ->front->link;
+        if (LQ->front == NULL)
+            LQ->rear = NULL;
+        free(old);
+        return item;
+    }
+}
+
+int main(void) {
+    int n;
+    // N 입력
+    scanf("%d", &n);
+
+    LQueueType* LQ = createLinkedQueue();  // 연결 큐 생성
+
+    // 1번부터 N번까지 카드를 큐에 삽입하는 연산
+    for (int i = 1; i <= n; i++) {
+        enLQueue(LQ, i);
+    }
+
+    // 카드가 1장 남을 때까지 반복하는 연산
+    while (LQ->front != LQ->rear) {			// front와 rear가 같으면 카드가 1장 남은 상태
+        deLQueue(LQ);						// 가장 위에 있는 카드를 버림
+        element moveCard = deLQueue(LQ);	// 다음 위에 있는 카드
+        enLQueue(LQ, moveCard);				// 가장 아래로 옮김
+    }
+
+    // 가장 마지막에 남는 카드 출력
+    printf("%d\n", LQ->front->data);
+
+    // 메모리 해제
+    free(LQ->front);
+    free(LQ);
+
+    return 0;
+}
