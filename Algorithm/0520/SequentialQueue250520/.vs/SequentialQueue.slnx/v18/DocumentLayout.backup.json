@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\AlgorithmB\\Project\\0520\\SequentialQueue250520\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{596B83E7-967E-4CA9-9861-46698A678126}|DeQueueEx\\DeQueueEx.vcxproj|C:\\AlgorithmB\\Project\\0520\\SequentialQueue250520\\DeQueueEx\\deQue.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{596B83E7-967E-4CA9-9861-46698A678126}|DeQueueEx\\DeQueueEx.vcxproj|solutionrelative:DeQueueEx\\deQue.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{596B83E7-967E-4CA9-9861-46698A678126}|DeQueueEx\\DeQueueEx.vcxproj|C:\\AlgorithmB\\Project\\0520\\SequentialQueue250520\\DeQueueEx\\dequeueEx.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{596B83E7-967E-4CA9-9861-46698A678126}|DeQueueEx\\DeQueueEx.vcxproj|solutionrelative:DeQueueEx\\dequeueEx.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{596B83E7-967E-4CA9-9861-46698A678126}|DeQueueEx\\DeQueueEx.vcxproj|C:\\AlgorithmB\\Project\\0520\\SequentialQueue250520\\DeQueueEx\\deQue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{596B83E7-967E-4CA9-9861-46698A678126}|DeQueueEx\\DeQueueEx.vcxproj|solutionrelative:DeQueueEx\\deQue.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "deQue.h",
+              "DocumentMoniker": "C:\\AlgorithmB\\Project\\0520\\SequentialQueue250520\\DeQueueEx\\deQue.h",
+              "RelativeDocumentMoniker": "DeQueueEx\\deQue.h",
+              "ToolTip": "C:\\AlgorithmB\\Project\\0520\\SequentialQueue250520\\DeQueueEx\\deQue.h",
+              "RelativeToolTip": "DeQueueEx\\deQue.h",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2026-05-20T07:02:06.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dequeueEx.c",
+              "DocumentMoniker": "C:\\AlgorithmB\\Project\\0520\\SequentialQueue250520\\DeQueueEx\\dequeueEx.c",
+              "RelativeDocumentMoniker": "DeQueueEx\\dequeueEx.c",
+              "ToolTip": "C:\\AlgorithmB\\Project\\0520\\SequentialQueue250520\\DeQueueEx\\dequeueEx.c",
+              "RelativeToolTip": "DeQueueEx\\dequeueEx.c",
+              "ViewState": "AgIAABAAAAAAAAAAAAAAwCMAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-20T05:07:09.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "deQue.c",
+              "DocumentMoniker": "C:\\AlgorithmB\\Project\\0520\\SequentialQueue250520\\DeQueueEx\\deQue.c",
+              "RelativeDocumentMoniker": "DeQueueEx\\deQue.c",
+              "ToolTip": "C:\\AlgorithmB\\Project\\0520\\SequentialQueue250520\\DeQueueEx\\deQue.c",
+              "RelativeToolTip": "DeQueueEx\\deQue.c",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAkwIQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2026-05-20T04:54:43.823Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
