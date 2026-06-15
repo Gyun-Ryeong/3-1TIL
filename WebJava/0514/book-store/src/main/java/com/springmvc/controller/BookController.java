@@ -88,3 +88,4 @@ public class BookController {
 		model.addAttribute("addTitle", "신규도서등록");
 	}
 }
+
